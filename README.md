@@ -13,6 +13,15 @@ A Node.js + TypeScript server using tRPC to analyze a candidate's CV and a job d
 
 ## Installation & run
 
+#### Preconditions:
+To analyze PDF files they must be converted into Base64; Example:
+```text
+base64 job_description.pdf > job_description.b64
+base64 candidate_cv.pdf > candidate_cv.b64
+```
+
+*NOTE: in the `testClient.ts` already converted example of CV and job description are used.*
+
 1. Add actual endpoint and auth key to the `.env` constants:
 
 ```text
