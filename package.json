@@ -1,29 +1,33 @@
 {
-  "name": "ai-pdf-analizer",
+  "name": "pdf-analyzer",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn src/index.ts",
+    "dev": "nodemon src/server/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/server/index.js",
+    "test": "npx run tests/test.ts"
   },
-  "author": "Dmytro Boiko",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "@trpc/client": "^10.45.2",
-    "@trpc/react-query": "^10.45.2",
+    "@google-cloud/vertexai": "^1.9.3",
     "@trpc/server": "^10.45.2",
-    "body-parser": "^1.20.3",
+    "axios": "^1.8.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "form-data": "^4.0.2",
     "pdf-parse": "^1.1.1",
+    "trpc": "^0.10.4",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.10",
-    "@types/pdf-parse": "^1.1.4",
-    "ts-node-dev": "^2.0.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   }
 }
